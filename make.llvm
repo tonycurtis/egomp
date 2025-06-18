@@ -1,0 +1,4 @@
+FC             = flang-new
+FFLAGS         = -cpp -O3 -ffast-math -mcpu=a64fx -fopenmp
+LD             = $(FC)
+LDFLAGS        = $(FFLAGS)
