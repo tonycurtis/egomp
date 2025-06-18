@@ -1,0 +1,4 @@
+FC             = ftn
+FFLAGS         = -dZ -ef -Ofast -homp
+LD             = $(FC)
+LDFLAGS        = $(FFLAGS)

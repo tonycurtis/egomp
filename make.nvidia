@@ -1,0 +1,4 @@
+FC             = nvfortran
+FFLAGS         = -Mpreprocess -fast -tp=neoverse-v1 -mp
+LD             = $(FC)
+LDFLAGS        = $(FFLAGS)
