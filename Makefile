@@ -3,6 +3,8 @@
 # sources have module dependencies
 .NOTPARALLEL:
 
+.PHONY: all tidy clean
+
 SRCS = m_config.f90 \
 	m_fields.f90 \
 	m_io.f90 \
@@ -15,13 +17,13 @@ SRCS += main.o
 OBJS = $(SRCS:.f90=.o)
 MODS = $(SRCS:.f90=.mod)
 
+all:	a.out
+
 a.out:	$(OBJS)
 	$(LD) $(LDFLAGS) -o $@ $^
 
 %.o: %.f90
 	$(FC) $(FFLAGS) -c -o $@ $^
-
-.PHONY: tidy clean
 
 tidy:
 	rm -f $(OBJS)
