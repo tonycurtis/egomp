@@ -1,5 +1,8 @@
 -include make.$(comp)
 
+# sources have module dependencies
+.NOTPARALLEL:
+
 SRCS = m_config.f90 \
 	m_fields.f90 \
 	m_io.f90 \
